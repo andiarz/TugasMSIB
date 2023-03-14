@@ -78,10 +78,11 @@
     let data = [p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11, p12, p13, p14, p15];
 </script>
 
+<h1>PEWARNAAN BERDASARKAN PREDIKAT</h1>
 <h3>
     <table style="padding: 10; text-align: center; width: 100%;">
 
-        <thead>
+        <thead bgcolor="gray">
             <tr>
                 <th>No</th>
                 <th>Nama</th>
@@ -115,18 +116,101 @@
                         warna = 'red';
                     } else;
                     let predikat = "";
-                    if (grade == 'A') {
-                        predikat = 'Sangat Baik';
-                    } else if (grade == 'B') {
-                        predikat = 'Baik';
-                    } else if (grade == 'C') {
-                        predikat = 'Cukup';
-                    } else if (grade == 'D') {
-                        predikat = 'Kurang';
-                    } else if (grade == 'E') {
-                        predikat = 'Sangat Kurang';
-                    } else;
+                    switch (grade) {
+                        case "A":
+                            predikat = 'Sangat Baik';
+                            break;
+                        case "B":
+                            predikat = 'Baik';
+                            break;
+                        case "C":
+                            predikat = 'Cukup';
+                            break;
+                        case "D":
+                            predikat = 'Kurang';
+                            break;
+                        case "E":
+                            predikat = 'Sangat Kurang';
+                            break;
+                        default:
+                            predikat = "";
+                    }
 
+                    document.write(`<tr bgcolor="${warna}">
+                        <td>${no++}</td>
+                        <td>${d.nama}</td>
+                        <td>${d.jk}</td>
+                        <td>${d.nilai}</td>
+                        <td>${grade}</td>
+                        <td>${predikat}</td>
+                    </tr>`);
+                }
+            </script>
+        </tbody>
+    </table>
+    <br> Catatan : Warna mewakili Nilai dan Grade
+    <ul>
+        <li>Biru : Sangat Baik (A) dengan Nilai 85 - 100</li>
+        <li>Hijau : Baik (B) dengan Nilai 70 - 84</li>
+        <li>Kuning : Cukup (C) dengan Nilai 50 - 69</li>
+        <li>Jingga : Kurang (D) dengan Nilai 30 - 49</li>
+        <li>Merah : Sangat Kurang (E) dengan Nilai 0 - 29</li>
+    </ul>
+</h3>
+<br><br>
+<h1>PEWARNAAN BERDASARKAN NOMOR URUT GANJIL-GENAP</h1>
+<h3>
+    <table style="padding: 10; text-align: center; width: 100%;">
+
+        <thead>
+            <tr bgcolor="lightgray">
+                <th>No</th>
+                <th>Nama</th>
+                <th>Jenis Kelamin</th>
+                <th>Nilai</th>
+                <th>Grade</th>
+                <th>Predikat</th>
+            </tr>
+        </thead>
+        <tbody>
+            <script>
+                var warna;
+                var no = 1;
+
+                for (d of data) {
+                    let grade = "";
+                    if (d.nilai >= 85) {
+                        grade = 'A';
+                    } else if (d.nilai >= 70) {
+                        grade = 'B';
+                    } else if (d.nilai >= 50) {
+                        grade = 'C';
+                    } else if (d.nilai >= 30) {
+                        grade = 'D';
+                    } else if (d.nilai >= 0) {
+                        grade = 'E';
+                    } else;
+                    let predikat = "";
+                    switch (grade) {
+                        case "A":
+                            predikat = 'Sangat Baik';
+                            break;
+                        case "B":
+                            predikat = 'Baik';
+                            break;
+                        case "C":
+                            predikat = 'Cukup';
+                            break;
+                        case "D":
+                            predikat = 'Kurang';
+                            break;
+                        case "E":
+                            predikat = 'Sangat Kurang';
+                            break;
+                        default:
+                            predikat = "";
+                    }
+                    warna = (no % 2 == 0) ? "yellow" : "green";
                     document.write(`<tr bgcolor="${warna}">
                         <td>${no++}</td>
                         <td>${d.nama}</td>
