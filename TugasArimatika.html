@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleArimatika.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="hitung">
+        <table class="tabel" border="1">
+            <tr>
+                <th colspan="5">
+                    <h2>FORM PERHITUNGAN ARIMATIKA JAVASCRIPT</h2>
+                </th>
+            </tr>
+            <tr>
+                <td colspan="2"><label>Angka 1 : </label></td>
+                <td colspan="3"><input type="text" name="angka" placeholder="Masukkan Angka Pertama"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><label>Angka 2 : </label></td>
+                <td colspan="3"><input type="text" name="angka2" placeholder="Masukkan Angka Kedua"></td>
+            </tr>
+            <tr align="center">
+                <th><button class="btn sorot" type="button" name="btn-tambah" onclick="tambah()"><label class="teks">Tambah (+)</label></button></th>
+                <th><button class="btn sorot" type="button" name="btn-kurang" onclick="kurang()"><label class="teks">Kurang (-)</label></button></th>
+                <th><button class="btn sorot" type="button" name="btn-kali" onclick="kali()"><label class="teks">Kali (x)</label></button></th>
+                <th><button class="btn sorot" type="button" name="btn-bagi" onclick="bagi()"><label class="teks">Bagi (:)</label></button></th>
+                <th><button class="btn sorot" type="button" name="btn-pangkat" onclick="pangkat()"><label class="teks">Pangkat (<sup>2</sup>)</label></button></th>
+            </tr>
+            <tr>
+                <th colspan="5">
+                    <h2>HASIL PERHITUNGAN</h2>
+                </th>
+            </tr>
+            <tr>
+                <td colspan="2">Pertambahan</td>
+                <td colspan="3"><input align="center" type="text" name="hasiltambah" disabled></td>
+            </tr>
+            <tr>
+                <td colspan="2">Pengurangan</td>
+                <td colspan="3"><input type="text" name="hasilkurang" disabled></td>
+            </tr>
+            <tr>
+                <td colspan="2">Perkalian</td>
+                <td colspan="3"><input type="text" name="hasilkali" disabled></td>
+            </tr>
+            <tr>
+                <td colspan="2">Pembagian</td>
+                <td colspan="3"><input type="text" name="hasilbagi" disabled></td>
+            </tr>
+            <tr>
+                <td colspan="2">Perpangkatan</td>
+                <td colspan="3"><input type="text" name="hasilpangkat" disabled></td>
+            </tr>
+        </table>
+        <script src="Arimatika.js"></script>
+</body>
+
+</html>

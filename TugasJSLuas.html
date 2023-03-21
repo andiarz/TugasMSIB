@@ -1,0 +1,81 @@
+<h1>MENGHITUNG LUAS BANGUN DATAR</h1>
+<hr/>
+
+<script>
+    var opsi = prompt("Masukkan Pilihan dari 1-8 (1. Persegi  2. Persegi Panjang  3. Segitiga  4. Lingkaran  5. Trapesium  6. Jajar Genjang  7. Belah Ketupat  8. Layang-Layang) : ");
+
+    if (opsi == "1") {
+        var sisi = prompt("Masukkan Panjang Sisi Persegi : ");
+
+        let luas_persegi = sisi * sisi;
+
+        document.write("<br>Panjang Sisi Persegi  = " + sisi);
+        document.write("<br>Luas Persegi = " + luas_persegi);
+    } else if (opsi == "2") {
+        var panjang_pp = prompt("Masukkan Panjang Persegi Panjang : ");
+        var lebar_pp = prompt("Masukkan Lebar Persegi Panjang : ");
+
+        let luas_pp = panjang_pp + lebar_pp;
+
+        document.write("<br>Panjang Persegi Panjang = " + panjang_pp);
+        document.write("<br>Lebar Persegi Panjang = " + lebar_pp);
+        document.write("<br>Luas Persegi Panjang = " + luas_pp);
+    } else if (opsi == "3") {
+        var alas_segitiga = prompt("Masukkan Alas Segitiga : ");
+        var tinggi_segitiga = prompt("Masukkan Tinggi Segitiga : ");
+
+        let luas_segitiga = (alas_segitiga * tinggi_segitiga) / 2;
+
+        document.write("<br>Alas Segitiga = " + alas_segitiga);
+        document.write("<br>Tinggi Segitiga = " + tinggi_segitiga);
+        document.write("<br>Luas Segitiga = " + luas_segitiga);
+    } else if (opsi == "4") {
+        var jari_jari = prompt("Masukkan Jari-Jari Lingkaran : ");
+        const phi = 3.14;
+
+        let luas_lingkaran = jari_jari * phi * jari_jari;
+
+        document.write("<br>Jari-Jari Lingkaran = " + jari_jari);
+        document.write("<br>Luas Lingkaran = " + luas_lingkaran);
+    } else if (opsi == "5") {
+        var sisi1 = prompt("Masukkan Sisi Atas : ");
+        var sisi2 = prompt("Masukkan Sisi Bawah : ");
+        var tinggi_trapesium = prompt("Masukkan Tinggi Trapesium : ");
+
+        let luas_trapesium = ((parseInt(sisi1) + parseInt(sisi2)) * tinggi_trapesium) / 2;
+
+        document.write("<br>Sisi Atas Trapesium = " + sisi1);
+        document.write("<br>Sisi Bawah Trapesium = " + sisi2);
+        document.write("<br>Tinggi Trapesium = " + tinggi_trapesium);
+        document.write("<br>Luas trapesium = " + luas_trapesium);
+    } else if (opsi == "6") {
+        var alas_jg = prompt("Masukkan Alas Jajar Genjang : ");
+        var tinggi_jg = prompt("Masukkan Tinggi Jajar Genjang : ");
+
+        let luas_jg = alas_jg * tinggi_jg;
+
+        document.write("<br>Alas Jajar Genjang = " + alas_jg);
+        document.write("<br>Tinggi Jajar Genjang = " + tinggi_jg);
+        document.write("<br>Luas Jajar Genjang = " + luas_jg);
+    } else if (opsi == "7") {
+        var diagonal_1 = prompt("Masukkan Diagonal 1 Belah Ketupat: ");
+        var diagonal_2 = prompt("Masukkan Diagonal 2 Belah Ketupat : ");
+
+        let luas_bk = (diagonal_1 * diagonal_2) / 2;
+
+        document.write("<br>Diagonal 1 Belah Ketupat = " + diagonal_1);
+        document.write("<br>Diagonal 2 Belah Ketupat = " + diagonal_2);
+        document.write("<br>Luas Belah Ketupat = " + luas_bk);
+    } else if (opsi == "8") {
+        var diagonal_a = prompt("Masukkan Diagonal 1 Layang-Layang: ");
+        var diagonal_b = prompt("Masukkan Diagonal 2 Layang-Layang : ");
+
+        let luas_ll = (diagonal_a * diagonal_b) / 2;
+
+        document.write("<br>Diagonal 1 Layang-Layang = " + diagonal_a);
+        document.write("<br>Diagonal 2 Layang-Layang = " + diagonal_b);
+        document.write("<br>Luas Layang-Layang = " + luas_ll);
+    } else {
+        document.write("<br>Maaf Opsi yang Anda Masukkan Tidak Ada!!");
+    };
+</script>

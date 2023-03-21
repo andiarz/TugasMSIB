@@ -1,0 +1,43 @@
+<script>
+    alert('Anda akan memasukki Program Percabangan! Siapkan diri Anda!');
+</script>
+<h2>PROGRAM PERCABANGAN DATA PEGAWAI</h2>
+<hr/>
+<script>
+    let pegawai = prompt("Masukkan Nama Pegawai : ");
+    let jabatan = prompt("Masukkan Jabatan Pegawai (staff - asisten manager - manager): ");
+    let status = prompt("Masukkan Status (lajang/menikah) : ");
+
+    document.write("<br>Nama Pegawai : " + pegawai);
+    document.write("<br>Jabatan : " + jabatan);
+    document.write("<br>Status : " + status);
+
+    let gajipokok = 0;
+
+    if (jabatan == "manager") {
+        gajipokok = 10000000;
+    } else if (jabatan == "asisten manager") {
+        gajipokok = 8000000;
+    } else if (jabatan == "staff") {
+        gajipokok = 5000000;
+    } else;
+
+    let tunjangan_jbtn = 0.1 * gajipokok;
+    let bpjs = 0.1 * gajipokok;
+
+
+    if (status == "menikah") {
+        tunjangan_klrg = 0.1 * gajipokok;
+    } else {
+        tunjangan_klrg = 0 * gajipokok;
+    };
+
+    let gaji = parseInt(gajipokok) + parseInt(tunjangan_jbtn) + parseInt(tunjangan_klrg) - parseInt(bpjs);
+
+    document.write("<br><br>Gaji Pokok = " + gajipokok);
+    document.write("<br>Tunjangan Jabatan = " + tunjangan_jbtn);
+    document.write("<br>Tunjangan Keluarga = " + tunjangan_klrg);
+    document.write("<br>Asuransi Kesehatan (BPJS) : " + bpjs);
+    document.write("<br>__________________________________ (Akumulasi)");
+    document.write("<br>Total Gaji = " + gaji);
+</script>
